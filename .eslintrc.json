@@ -1,0 +1,38 @@
+{
+    "extends": ["eslint:recommended"],
+    "env": {
+      "commonjs": true,
+      "es6": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "rules": {
+      "indent": [2, 2],
+      "quotes": [0, "single"],
+      "no-multiple-empty-lines": [2, { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
+      "no-trailing-spaces": 2,
+      "no-console": 0,
+      "no-empty": 0,
+  
+      "space-in-parens": [0, "never"],
+      "template-curly-spacing": [2, "never"],
+      "array-bracket-spacing": [2, "never"],
+      "object-curly-spacing": [2, "always"],
+      "computed-property-spacing": [2, "never"],
+  
+      "no-var": 2,
+      "prefer-const": 1,
+      "no-use-before-define": [2, { "functions": false }],
+      "no-undef": 2,
+      "no-case-declarations": 1,
+      "no-return-assign": 1,
+      "no-param-reassign": 1,
+      "no-shadow": 1,
+      "no-underscore-dangle": [0, "always"],
+      "no-unused-vars": 1,
+      "comma-dangle": 0
+    }
+  }
+  

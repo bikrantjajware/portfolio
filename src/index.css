@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-primary: #faffff;
+  --bg-secondary: #fdffe2;
+  --font-primary: #4a4a4a;
+  --shadow-primary: #a9a9a9;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+article h1 {
+  margin: 1rem 0;
+}
+
+/***** Theme *********/
+
+/*
+.dark-mode {
+  --bg-primary: #000a24;
+  --bg-secondary: #2e4f4a;
+  --font-primary: #adadad;
+  --shadoow-1: #0e8388;
+  --hover-dark: #7e8059;
+}
+
+/***** Theme *********/
