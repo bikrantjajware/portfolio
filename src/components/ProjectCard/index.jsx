@@ -15,9 +15,9 @@ const ProjectCard = ({ title, imgUrl, description, link }) => {
       }`}>
       <img src={imgUrl} className="object-cover" alt={title} />
       {isHovered && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-slate-200 bg-blue-950 bg-opacity-80">
-          <h3 className="text-4xl font-semibold">{title}</h3>
-          <p className="mt-2 text-lg text-sky-300">{description}</p>
+        <div className="absolute inset-0  flex-col items-center justify-center p-4 text-slate-200 bg-black bg-opacity-80">
+          <h3 className="text-4xl font-palanquin text-white">{title}</h3>
+          <p className="mt-2 text-lg text-white font-extralight">{description}</p>
           <a
             href={link}
             target="_blank"
