@@ -25,13 +25,23 @@ module.exports = {
         'project1': `url(images/projects/m3mories.png)`
       },
       animation: {
-        glitch: 'glitch 0.0002s ease-in-out infinite'
+        glitch: 'glitch 0.0002s ease-in-out infinite',
+        showNav: 'showNav 1s ease forwards',
+        hideNav: 'hideNav 1s ease forwards'
       },
       keyframes: {
         glitch: {
           '0%,100%': { transform: 'translate(0)' },
           '25%': { transform: 'translate(-15px)' },
           '50%': { transform: 'translate(15px)' }
+        },
+        showNav: {
+          '0%': { top: '-100%' },
+          '100%': { top: '0' }
+        },
+        hideNav: {
+          '0%': { top: '0' },
+          '100%': { top: '-100%' }
         }
       }
     }
