@@ -15,7 +15,7 @@ const Header = () => {
         <FaGithubSquare size="35" />
         <FaSquareXTwitter size="35" />
       </div>
-      <div className="py-3 w-[60%] ">
+      <div className="py-3 md:w-[70%] ">
         <h3 className="py-3 text-4xl font-palanquin"> A little about me</h3>
         <p className="font-montserrat text-xl text-slate-800">
           I'm a CS graduate with <strong>4+</strong> years experience of working in software space.

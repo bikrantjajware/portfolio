@@ -4,7 +4,8 @@ import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 import { useEffect } from 'react';
 
 const Navigation = ({ isDark, setIsDark }) => {
-  const [showDockedMenu, setShowDockedMenu] = useState(null);
+  const [showDockedMenu, setShowDockedMenu] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const navigate = useNavigate();
   console.log(navigate);
 
@@ -33,28 +34,26 @@ const Navigation = ({ isDark, setIsDark }) => {
           <Link to="/" className="text-3xl">
             Home
           </Link>
-          <div onClick={() => setIsDark(!isDark)}>{isDark ? <FaSun /> : <FaMoon />}</div>
         </div>
 
-        {showDockedMenu ? (
-          <FaTimes
-            className="sm:hidden text-3xl cursor-pointer"
-            onClick={() => setShowDockedMenu(false)}
-          />
-        ) : (
-          <FaBars
-            onClick={() => setShowDockedMenu(true)}
-            className="sm:hidden text-3xl cursor-pointer"
-          />
-        )}
+        <FaBars
+          onClick={() => {
+            setShowDockedMenu(true);
+            setIsClicked(true);
+          }}
+          className="sm:hidden text-3xl cursor-pointer"
+        />
+        <div
+          className="absolute right-[-15px] rounded-lg top-12 text-3xl p-2 w-14 text-violet-800"
+          onClick={() => setIsDark(!isDark)}>
+          {isDark ? <FaSun /> : <FaMoon />}
+        </div>
         <div
           ref={dockedMenuModalRef}
           className={`flex sm:hidden absolute w-[100%] top-[-100%] ${
-            showDockedMenu && 'top-[0] animate-showNav'
-          }
-          
-            ${showDockedMenu === false && 'animate-hideNav'}`}>
-          <ul className="flex gap-3 flex-col items-center bg-violet-50 rounded-xl  min-h-max w-[100%] shadow-lg py-5">
+            isClicked && (showDockedMenu ? 'animate-showNav' : 'animate-hideNav')
+          }`}>
+          <ul className="flex gap-3 flex-col items-center bg-violet-50 rounded-xl  min-h-max w-[100%] shadow-xl py-5">
             <li>
               <Link className="w-[100%]" to="blogs">
                 Blog
@@ -71,7 +70,6 @@ const Navigation = ({ isDark, setIsDark }) => {
           </ul>
           )
         </div>
-
         <div className={`hidden sm:flex items-center relative `}>
           <ul className="flex gap-3">
             <li>
