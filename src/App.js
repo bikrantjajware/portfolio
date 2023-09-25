@@ -8,7 +8,7 @@ import { useState } from 'react';
 function App() {
   const [isDark, setIsDark] = useState(false);
   return (
-    <div className={`App text-gray-900`}>
+    <div className={`App ${isDark ? 'dark' : ''} bg-primary text-foreground`}>
       <Navigation setIsDark={setIsDark} isDark={isDark} />
 
       <Routes>
