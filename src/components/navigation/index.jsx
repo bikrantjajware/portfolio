@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
+import { FaSun, FaMoon, FaBars, FaHome } from 'react-icons/fa';
 import { useEffect } from 'react';
 
 const Navigation = ({ isDark, setIsDark }) => {
@@ -26,13 +26,13 @@ const Navigation = ({ isDark, setIsDark }) => {
       document.removeEventListener('mousedown', listener);
     };
   }, [dockedMenuModalRef]);
-  console.log({ showDockedMenu });
+
   return (
-    <header className="text-2xl px-2">
+    <header className="text-2xl p-2">
       <nav className="flex justify-between items-center">
         <div className="flexitems-center gap-4">
           <Link to="/" className="text-3xl">
-            Home
+            <FaHome />
           </Link>
         </div>
 
@@ -44,7 +44,7 @@ const Navigation = ({ isDark, setIsDark }) => {
           className="sm:hidden text-3xl cursor-pointer"
         />
         <div
-          className="absolute right-[-15px] rounded-lg top-12 text-3xl p-2 w-14 text-violet-800"
+          className="absolute right-[-15px] rounded-lg top-12 text-3xl p-2 w-14 "
           onClick={() => setIsDark(!isDark)}>
           {isDark ? <FaSun /> : <FaMoon />}
         </div>
@@ -53,7 +53,7 @@ const Navigation = ({ isDark, setIsDark }) => {
           className={`flex sm:hidden absolute w-[100%] top-[-100%] ${
             isClicked && (showDockedMenu ? 'animate-showNav' : 'animate-hideNav')
           }`}>
-          <ul className="flex gap-3 flex-col items-center bg-violet-50 rounded-xl  min-h-max w-[100%] shadow-xl py-5">
+          <ul className="flex gap-3 flex-col items-center bg-secondary text-secondary-foreground rounded-xl  min-h-max w-[100%] shadow-xl py-5">
             <li>
               <Link className="w-[100%]" to="blogs">
                 Blog
