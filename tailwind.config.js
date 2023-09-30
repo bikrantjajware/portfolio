@@ -69,11 +69,21 @@ module.exports = {
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 }
+        },
+        'showNav': {
+          from: { top: '-100%' },
+          to: { top: 0 }
+        },
+        'hideNav': {
+          from: { top: 0 },
+          to: { top: '-100%' }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'showNav': 'showNav 0.7s ease-out forwards',
+        'hideNav': 'hideNav 0.7s ease-out forwards'
       }
     }
   },
