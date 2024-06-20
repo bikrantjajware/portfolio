@@ -6,15 +6,16 @@ import Blogs from './pages/blogs';
 import { useState } from 'react';
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   return (
-    <div className={`App text-gray-900`}>
-      <Navigation setIsDark={setIsDark} isDark={isDark} />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blogs" element={<Blogs />} />
-      </Routes>
+    <div className={`App ${isDark ? 'dark' : ''}`}>
+      <div class="dark:bg-slate-900">
+        <Navigation setIsDark={setIsDark} isDark={isDark} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blogs" element={<Blogs />} />
+        </Routes>
+      </div>
     </div>
   );
 }
