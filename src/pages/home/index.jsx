@@ -7,7 +7,7 @@ import Header from '../../sections/Header';
 const Home = () => {
   return (
     <div className="main-content ">
-      <div className="px-10">
+      <div className="px-4 md:px-10">
         <Header />
         <Projects />
       </div>
