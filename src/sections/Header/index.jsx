@@ -3,29 +3,35 @@ import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 
 const Header = () => {
+  const sectionStyle = 'rounded-lg p-2 my-6';
   return (
-    <div class="dark:text-slate-300">
-      <section class="bg-orange-100 rounded-lg p-2 hover:bg-orange-200 my-2">
+    <div class="text-xl text-slate-800 dark:text-slate-300">
+      <section
+        class={` bg-orange-100 hover:bg-opacity-40  ${sectionStyle} h-full w-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-300 shadow-xl`}>
         <h3 className="text-4xl font-palanquin py-2"> I'm Bikrant</h3>
-        <h3 className="text-2xl font-montserrat py-1 pb-3 text-slate-600 dark:text-slate-400">
+        <h3 className="font-montserrat pb-2">
           your friendly remote
-          <span className="text-orange-700 font-medium"> Software Developer</span>
+          <span className="text-orange-700 font-semibold"> Software Developer</span>
         </h3>
-        <div className="flex flex-row gap-5 border-red-100 rounded-lg">
-          <FaLinkedin size="35" />
-          <FaGithubSquare size="35" />
-          <FaSquareXTwitter size="35" />
+        <div className="flex flex-col gap-2">
+          <h4>Connect with me on:</h4>
+          <div className="flex flex-row gap-5 border-red-100 rounded-lg">
+            <FaLinkedin size="35" />
+            <FaGithubSquare size="35" />
+            <FaSquareXTwitter size="35" />
+          </div>
         </div>
       </section>
 
-      <section class="bg-blue-100 rounded-lg p-2 hover:bg-blue-200 my-2">
-        <div className="py-3 md:w-[60%]">
-          <h3 className="py-3 text-4xl font-palanquin"> A little about me</h3>
-          <p className="font-montserrat text-xl text-slate-800 dark:text-slate-400">
+      {/* a little about me  section */}
+      <section class={`bg-blue-100 hover:bg-blue-200 ${sectionStyle}`}>
+        <div className="md:w-[60%]">
+          <h3 className="text-3xl font-medium font-palanquin py-2"> A Little About Me</h3>
+          <p className="font-montserrat">
             I'm a CS graduate with <strong>4+</strong> years experience of working in software
-            space. I've experience working on{' '}
-            <span className="text-orange-700 font-medium"> MERN</span> stack, and{' '}
-            <span className="text-orange-700 font-medium"> AWS serverless </span>
+            space. I've experience working on
+            <span className="text-orange-700 font-semibold"> MERN</span> stack, and{' '}
+            <span className="text-orange-700 font-semibold"> AWS serverless </span>
             stack.
           </p>
         </div>
