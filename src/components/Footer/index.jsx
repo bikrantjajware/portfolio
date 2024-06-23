@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className="h-40 mt-6 relative dark:text-slate-300">
+    <div className="h-40 mt-6 relative">
       <p className=" font-palanquin text-center absolute bottom-0 left-[50%] translate-x-[-50%]">
         made with ♥️ by
         <span>

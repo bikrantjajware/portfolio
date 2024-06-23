@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 import { useEffect } from 'react';
 
 const Navigation = ({ isDark, setIsDark }) => {
   const [showDockedMenu, setShowDockedMenu] = useState(null);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const pagePath = window.location.pathname.replace('/', '');
   const [highlightedLink, setHighlightedLink] = useState(pagePath);
   const highlightStyle = 'bg-violet-200 rounded-lg';
@@ -30,9 +30,9 @@ const Navigation = ({ isDark, setIsDark }) => {
   }, [dockedMenuModalRef]);
   console.log({ showDockedMenu });
   return (
-    <header className="text-2xl dark:text-slate-300">
-      <nav className="flex justify-between items-center transition-all duration-1000 m-2 box-border">
-        <div className="flex items-center gap-4">
+    <header className="text-2xl">
+      <nav className="flex justify-between items-center transition-all duration-1000 box-border">
+        <div className="flex items-center gap-4 p-4">
           <Link
             to="/"
             className={`${navlinkStyle} ${highlightedLink == '' ? highlightStyle : ''}`}
@@ -70,7 +70,7 @@ const Navigation = ({ isDark, setIsDark }) => {
           
             ${showDockedMenu === false && 'animate-hideNav'}`}>
           <ul
-            className="flex gap-3 flex-col items-center bg-pink-800 rounded-b-xl  min-h-max shadow-lg py-5 w-full"
+            className="flex gap-3 flex-col items-center bg-pink-800 rounded-b-xl  min-h-max shadow-lg py-5 w-full z-10"
             onClick={() => setShowDockedMenu(false)}>
             <li>
               <Link to="blogs">Blog</Link>
@@ -87,7 +87,7 @@ const Navigation = ({ isDark, setIsDark }) => {
         </div>
 
         <div className={`hidden sm:flex items-center relative `}>
-          <ul className="flex gap-3">
+          <ul className="flex gap-3 p-4">
             <li>
               <Link
                 className={`${navlinkStyle} ${highlightedLink == 'blogs' ? highlightStyle : ''}`}
