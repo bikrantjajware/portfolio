@@ -10,7 +10,7 @@ function App() {
   const [isDark, setIsDark] = useState(true);
   return (
     <div className={`App ${isDark ? 'dark' : ''}`}>
-      <div className=" dark: my-dark-bg text-slate-800 dark:text-slate-200">
+      <div className="my-dark-bg text-slate-800 dark:text-slate-400">
         <Navigation setIsDark={setIsDark} isDark={isDark} />
         <Routes>
           <Route path="/" element={<Home />} />

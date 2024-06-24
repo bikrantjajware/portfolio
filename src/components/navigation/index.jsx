@@ -8,8 +8,9 @@ const Navigation = ({ isDark, setIsDark }) => {
   // const navigate = useNavigate();
   const pagePath = window.location.pathname.replace('/', '');
   const [highlightedLink, setHighlightedLink] = useState(pagePath);
-  const highlightStyle = 'bg-violet-200 rounded-lg';
-  const navlinkStyle = 'text-2xl p-2';
+  const highlightStyle =
+    'bg-violet-200 rounded-lg dark:bg-violet-900 hover:shadow-lg dark:hover:shadow-black';
+  const navlinkStyle = 'text-2xl p-2 dark:hover:text-slate-200 hover:scale-105';
 
   const dockedMenuModalRef = useRef(null);
 
@@ -31,7 +32,7 @@ const Navigation = ({ isDark, setIsDark }) => {
   console.log({ showDockedMenu });
   return (
     <header className="text-2xl">
-      <nav className="flex justify-between items-center transition-all duration-1000 box-border">
+      <nav className="flex justify-between items-center transition-all duration-200 box-border">
         <div className="flex items-center gap-4 p-4">
           <Link
             to="/"
@@ -42,11 +43,11 @@ const Navigation = ({ isDark, setIsDark }) => {
           </Link>
           <div
             onClick={() => setIsDark(!isDark)}
-            className="hover:scale-[1.8] transition-all duration-500">
+            className="hover:scale-[1.8] transition-all duration-300">
             {isDark ? (
-              <FaSun className="text-2xl text-yellow-500  hover:animate-spin duration-500" />
+              <FaSun className="text-2xl text-yellow-500  hover:animate-spin " />
             ) : (
-              <FaMoon className="text-2xl hover:animate-spin duration-500" />
+              <FaMoon className="text-2xl hover:animate-spin" />
             )}
           </div>
         </div>

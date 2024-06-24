@@ -50,7 +50,7 @@ article h1 {
 
 .dark .my-dark-bg {
   @apply bg-cover bg-center;
-  background-image: url('/src/images/background/dark-bg.png');
+  background-image: url('/src/images/background/dark-bg2.jpg');
   /* background: #7e8059; */
 }
 
