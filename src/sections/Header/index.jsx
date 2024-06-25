@@ -3,12 +3,12 @@ import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 
 const Header = () => {
-  const sectionStyle = 'rounded-lg p-2 my-6 hover:text-slate-800 dark:hover:text-slate-300';
+  const sectionStyle = 'rounded-lg p-2 my-6 hover:text-slate-800 dark:hover:text-slate-200';
   const glassStyle =
-    'h-full w-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-300 shadow-xl dark:bg-opacity-5 dark:hover:bg-opacity-10 dark:hover:text-slate-600';
+    'h-full w-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-300 shadow-xl dark:bg-opacity-5 dark:hover:bg-opacity-10';
   return (
-    <div class="text-xl dark:my-dark-bg">
-      <section class={` bg-orange-100 hover:bg-opacity-50  ${sectionStyle} ${glassStyle}`}>
+    <div className="text-xl dark:my-dark-bg">
+      <section className={` bg-orange-100 hover:bg-opacity-50  ${sectionStyle} ${glassStyle}`}>
         <h3 className="text-4xl font-palanquin py-2"> I'm Bikrant</h3>
         <h3 className="font-montserrat pb-2">
           your friendly remote
@@ -25,7 +25,7 @@ const Header = () => {
       </section>
 
       {/* a little about me  section */}
-      <section class={`bg-blue-100 hover:bg-opacity-50  ${sectionStyle} ${glassStyle}`}>
+      <section className={`bg-blue-100 hover:bg-opacity-50  ${sectionStyle} ${glassStyle}`}>
         <div className="md:w-[60%]">
           <h3 className="text-3xl font-medium font-palanquin py-2"> A Little About Me</h3>
           <p className="font-montserrat">

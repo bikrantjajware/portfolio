@@ -8,7 +8,7 @@ const Footer = () => {
         made with ♥️ by
         <span>
           <Link
-            class="underline"
+            className="underline"
             target="_blank"
             rel="noopener noreferrer"
             to={'https://www.linkedin.com/in/bikrant-jajware/'}>
