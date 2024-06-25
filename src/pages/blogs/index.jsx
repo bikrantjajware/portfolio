@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const Blogs = () => {
   const [title, setTitle] = useState('');
-  const [content, setcontent] = useState('');
+  // const [content, setcontent] = useState('');
   return (
     <div className="blog-container">
       <form>
