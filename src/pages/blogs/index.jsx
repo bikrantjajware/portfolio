@@ -1,15 +1,9 @@
 import React from 'react';
-import { useState } from 'react';
 
 const Blogs = () => {
-  const [title, setTitle] = useState('');
-  // const [content, setcontent] = useState('');
   return (
-    <div className="blog-container">
-      <form>
-        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <textarea></textarea>
-      </form>
+    <div className="blog-container h-[100vh]">
+      <h1 className="m-auto">hello worlds</h1>
     </div>
   );
 };
