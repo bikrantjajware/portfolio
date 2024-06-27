@@ -1,14 +1,12 @@
 import React from 'react';
 import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
+import Section from '../../components/section';
 
 const Header = () => {
-  const sectionStyle = 'rounded-lg p-2 my-6 hover:text-slate-800 dark:hover:text-slate-200';
-  const glassStyle =
-    'h-full w-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-300 shadow-xl dark:bg-opacity-5 dark:hover:bg-opacity-10';
   return (
     <div className="text-xl dark:my-dark-bg">
-      <section className={` bg-orange-100 hover:bg-opacity-50  ${sectionStyle} ${glassStyle}`}>
+      <Section className="bg-green-200">
         <h3 className="text-4xl font-palanquin py-2"> I'm Bikrant</h3>
         <h3 className="font-montserrat pb-2">
           your friendly remote
@@ -22,10 +20,10 @@ const Header = () => {
             <FaSquareXTwitter size="35" />
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* a little about me  section */}
-      <section className={`bg-blue-100 hover:bg-opacity-50  ${sectionStyle} ${glassStyle}`}>
+      <Section className="bg-blue-100">
         <div className="md:w-[60%]">
           <h3 className="text-3xl font-medium font-palanquin py-2"> A Little About Me</h3>
           <p className="font-montserrat">
@@ -36,7 +34,7 @@ const Header = () => {
             stack.
           </p>
         </div>
-      </section>
+      </Section>
     </div>
   );
 };
