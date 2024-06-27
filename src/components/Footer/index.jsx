@@ -5,14 +5,14 @@ const Footer = () => {
   return (
     <div className="h-40 mt-6 relative">
       <p className=" font-palanquin text-center absolute bottom-0 left-[50%] translate-x-[-50%]">
-        made with ♥️ by
+        made with ♥️ by{' '}
         <span>
           <Link
-            className="underline"
+            className="underline text-orange-500"
             target="_blank"
             rel="noopener noreferrer"
             to={'https://www.linkedin.com/in/bikrant-jajware/'}>
-            bikrant jajware
+            Bikrant Jajware
           </Link>
         </span>
       </p>
