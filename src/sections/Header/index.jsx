@@ -2,6 +2,7 @@ import React from 'react';
 import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import Section from '../../components/section';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -15,9 +16,21 @@ const Header = () => {
         <div className="flex flex-col gap-2">
           <h4>Connect with me on:</h4>
           <div className="flex flex-row gap-5 border-red-100 rounded-lg">
-            <FaLinkedin size="35" />
-            <FaGithubSquare size="35" />
-            <FaSquareXTwitter size="35" />
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              to={'https://www.linkedin.com/in/bikrant-jajware/'}>
+              <FaLinkedin size="35" />
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              to={'https://github.com/bikrantjajware/'}>
+              <FaGithubSquare size="35" />
+            </Link>
+            <Link target="_blank" rel="noopener noreferrer" to={'https://x.com/bikrantjajware/'}>
+              <FaSquareXTwitter size="35" />
+            </Link>
           </div>
         </div>
       </Section>
