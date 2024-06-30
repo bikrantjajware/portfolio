@@ -13,7 +13,8 @@ const Navigation = ({ isDark, setIsDark }) => {
   const navlinkStyle = 'text-2xl p-2 dark:hover:text-slate-200 hover:scale-105';
 
   const dockedMenuModalRef = useRef(null);
-
+  const glassStyle =
+    'w-full bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-xl dark:bg-opacity-5 dark:hover:bg-opacity-10';
   useEffect(() => {
     const listener = (e) => {
       console.log('call listener');
@@ -54,7 +55,7 @@ const Navigation = ({ isDark, setIsDark }) => {
 
         {showDockedMenu ? (
           <FaTimes
-            className="sm:hidden text-2xl cursor-pointer z-10"
+            className="sm:hidden text-2xl cursor-pointer z-50 text-red-700"
             onClick={() => setShowDockedMenu(false)}
           />
         ) : (
@@ -71,16 +72,15 @@ const Navigation = ({ isDark, setIsDark }) => {
           
             ${showDockedMenu === false && 'animate-hideNav'}`}>
           <ul
-            className="flex gap-3 flex-col items-center bg-pink-800 rounded-b-xl  min-h-max shadow-lg py-5 w-full z-10"
+            className={`flex text-purple-900 dark:text-inherit font-medium gap-5 flex-col items-center rounded-b-xl  min-h-max shadow-lg py-5 w-full z-10 fixed ${glassStyle}`}
             onClick={() => setShowDockedMenu(false)}>
             <li>
               <Link to="blogs">Blog</Link>
             </li>
-            <hr className="text-slate-400" />
             <li>
               <Link to="bookshelf"> Bookshelf</Link>
             </li>
-            <hr className="text-slate-400" />
+
             <li>
               <Link to=""> Stuff i'll add</Link>
             </li>
@@ -88,7 +88,7 @@ const Navigation = ({ isDark, setIsDark }) => {
         </div>
 
         <div className={`hidden sm:flex items-center relative `}>
-          <ul className="flex gap-3 p-4">
+          <ul className="flex p-4">
             <li>
               <Link
                 className={`${navlinkStyle} ${highlightedLink == 'blogs' ? highlightStyle : ''}`}
@@ -98,7 +98,6 @@ const Navigation = ({ isDark, setIsDark }) => {
                 Blog
               </Link>
             </li>
-            <hr className="text-slate-400" />
             <li>
               <Link
                 className={`${navlinkStyle} ${
@@ -110,7 +109,6 @@ const Navigation = ({ isDark, setIsDark }) => {
                 Bookshelf
               </Link>
             </li>
-            <hr className="text-slate-400" />
             <li>
               <Link
                 className={`${navlinkStyle} ${highlightedLink == 'stuff' ? highlightStyle : ''}`}
